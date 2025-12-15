@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia com tópicos</title>
+
+  <!-- Estilos básicos -->
+  <style>
+    :root {
+      --bg: #0f172a;          /* fundo */
+      --card: #111827;        /* blocos */
+      --text: #e5e7eb;        /* texto principal */
+      --muted: #94a3b8;       /* texto secundário */
+      --accent: #22d3ee;      /* destaque */
+      --ring: #22d3ee33;      /* foco acessível */
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 10% -20%, #1f2937, var(--bg));
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0 0 8px;
+      letter-spacing: 0.2px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: linear-gradient(180deg, #0b1220, var(--card));
+      border-radius: 14px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255,255,255,0.02);
+      transition: border-color 140ms ease, transform 140ms ease;
+      overflow: clip; /* suaviza bordas ao expandir */
+    }
+    details[open] {
+      border-color: #374151;
+      transform: translateY(-1px);
+    }
+
+    summary {
+      list-style: none; /* remove caret padrão do navegador */
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Ícone de seta */
+    summary::before {
+      content: "▸";
+      color: var(--accent);
+      transition: transform 160ms ease;
+      transform-origin: center;
+    }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    /* Estado de foco acessível */
+    summary:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 4px var(--ring);
+      border-radius: 12px;
+    }
+
+    /* Conteúdo interno do tópico */
+    .content {
+      padding: 0 18px 18px 44px;
+      color: var(--muted);
+      border-top: 1px solid #1f2937;
+    }
+    .content h4 {
+      margin: 16px 0 6px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .content ul, .content ol {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Guia de tópicos</h1>
+      <p>Clique em um tópico para expandir e ver mais informações.</p>
+    </header>
+
+    <section class="accordion">
+
+      <details open>
+        <summary>Introdução</summary>
+        <div class="content">
+          <p>Bem-vindo! Esta página demonstra tópicos expansíveis usando apenas HTML e CSS.</p>
+          <p>Funciona em navegadores modernos, é leve e não requer bibliotecas.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Planejamento</summary>
+        <div class="content">
+          <h4>Defina objetivos</h4>
+          <ul>
+            <li>Escopo do conteúdo</li>
+            <li>Público-alvo</li>
+            <li>Formato e tom</li>
+          </ul>
+          <h4>Organize os tópicos</h4>
+          <ol>
+            <li>Crie uma lista principal</li>
+            <li>Agrupe subitens</li>
+            <li>Reveja títulos claros e curtos</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Conteúdo</summary>
+        <div class="content">
+          <p>Você pode colocar texto, listas, links, imagens e até código aqui.</p>
+          <p>Exemplo de link: <a href="https://exemplo.com" target="_blank" rel="noopener">saiba mais</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>FAQ</summary>
+        <div class="content">
+          <h4>Perguntas comuns</h4>
+          <ul>
+            <li>Posso ter vários tópicos? Sim.</li>
+            <li>Funciona no celular? Sim, é responsivo.</li>
+            <li>Precisa de JavaScript? Não, a interação é nativa.</li>
+          </ul>
+        </div>
+      </details>
+
+    </section>
+  </div>
+</body>
+</html>
