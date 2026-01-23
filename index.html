@@ -1,183 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guia com tópicos</title>
-
-  <!-- Estilos básicos -->
-  <style>
-    :root {
-      --bg: #0f172a;          /* fundo */
-      --card: #3457a1;        /* blocos */
-      --text: #e5e7eb;        /* texto principal */
-      --muted: #94a3b8;       /* texto secundário */
-      --accent: #22d3ee;      /* destaque */
-      --ring: #22d3ee33;      /* foco acessível */
-    }
-
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      background: radial-gradient(1200px 600px at 10% -20%, #1f2937, var(--bg));
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 880px;
-      margin: 48px auto;
-      padding: 0 20px;
-    }
-
-    header {
-      margin-bottom: 28px;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0 0 8px;
-      letter-spacing: 0.2px;
-    }
-    header p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .accordion {
-      display: grid;
-      gap: 14px;
-    }
-
-    details {
-      background: linear-gradient(180deg, #0b1220, var(--card));
-      border-radius: 14px;
-      border: 1px solid #1f2937;
-      box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255,255,255,0.02);
-      transition: border-color 140ms ease, transform 140ms ease;
-      overflow: clip; /* suaviza bordas ao expandir */
-    }
-    details[open] {
-      border-color: #374151;
-      transform: translateY(-1px);
-    }
-
-    summary {
-      list-style: none; /* remove caret padrão do navegador */
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 18px;
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    /* Ícone de seta */
-    summary::before {
-      content: "▸";
-      color: var(--accent);
-      transition: transform 160ms ease;
-      transform-origin: center;
-    }
-    details[open] summary::before {
-      transform: rotate(90deg);
-    }
-
-    /* Estado de foco acessível */
-    summary:focus-visible {
-      outline: 0;
-      box-shadow: 0 0 0 4px var(--ring);
-      border-radius: 12px;
-    }
-
-    /* Conteúdo interno do tópico */
-    .content {
-      padding: 0 18px 18px 44px;
-      color: var(--muted);
-      border-top: 1px solid #1f2937;
-    }
-    .content h4 {
-      margin: 16px 0 6px;
-      color: var(--text);
-      font-size: 1rem;
-    }
-    .content ul, .content ol {
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Suporte TI - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <h1>Guia de suporte TI</h1>
-      <p>Esse site tem como ajudar os gerentes e encarregados a resolver os problemas da loja de forma mais agil.</p>
-      <p>Clique em um tópico para expandir e ver mais informações.</p>
+        <div class="container">
+            <h1>GUIA SUPORTE TI</h1>
+            <p class="intro-text">
+                Site com o intuito de ajudar gerentes e encarregados a resolver problemas simples. 
+                <strong>O guia deve ser consultado antes de enviar mensagem no grupo pedindo ajuda.</strong>
+            </p>
+        </div>
     </header>
 
-    <section class="accordion">
+    <main class="container">
+        <h2>Selecione o problema:</h2>
+        
+        <div class="grid-botoes">
+            <a href="exemplo-solucao.html" class="btn-topico">1. Computador não liga</a>
+            <a href="exemplo-solucao.html" class="btn-topico">2. Erro de Pin Pad</a>
+            <a href="exemplo-solucao.html" class="btn-topico">3. Linear Travado</a>
+            <a href="exemplo-solucao.html" class="btn-topico">4. Loja sem Internet</a>
+            <a href="exemplo-solucao.html" class="btn-topico">5. DAV não entra</a>
+            <a href="exemplo-solucao.html" class="btn-topico">6. Problemas com Impressora</a>
+            <a href="exemplo-solucao.html" class="btn-topico">7. Como dar Carga</a>
+            <a href="exemplo-solucao.html" class="btn-topico">8. Produto não cadastrado</a>
+            <a href="exemplo-solucao.html" class="btn-topico">9. Pré-caixas receber carga</a>
+            <a href="exemplo-solucao.html" class="btn-topico">10. Como imprimir relatórios</a>
+            <a href="exemplo-solucao.html" class="btn-topico">11. Exportar relatório PDF</a>
+            <a href="exemplo-solucao.html" class="btn-topico">12. Troca de Ribbon</a>
+        </div>
+    </main>
 
-
-      <details>
-        <summary>COMPUTADOR NÃO LIGA🖥️❌</summary>
-        <div class="content">
-          <h4>prosiga dessa forma:</h4>
-          <ul>
-            <li>Certifique-se de que o filtro de linha está ligado e todos os cabos de energia estão conectados corretamente.</li>
-            <li>Verifique se há luzes indicativas nos dispositivos (como o computador e monitor) que estejam acesas</li>
-            <li>Teste colocar filtro de linha ou Dispositivo em outra tomada, ou troque o filtro de linha.</li>
-            <li>Coloque algum carregador ou dispositivo para fazer o teste se a tomada está funcionando.</li>
+    <footer>
+        <div class="container footer-content">
             
-          </ul>
-          
-        
-        </div>
-      </details>
+            <div class="contato-ti">
+                <h3>Contato TI</h3>
+                <p>Email: suporte@suaempresa.com.br</p>
+                <p>Celular/WhatsApp: (XX) 99999-9999</p>
+            </div>
 
-      <details>
-        <summary>COMPUTADOR NÃO INDENTIFICA O DISPOSITIVO</summary>
-        <div class="content">
-          <h4>Em caso de Impressora, impressora fiscal, mouse, teclado ou monitor pare de funcionar :</h4>
-          <ul>
-            <li>verifique se o dispositivo está conectado na tomada e ligado, se o cabo de energia está bem colocado;.</li>
-            <li>Troque o cabo do dispositivo de porta usb</li>
-            <li>Tire o dispositivo do computador e o conecte ele em outro computador, veja se irá funcionar.</li>
-            <li>Pegue outro dispositivo e conecte no computador que deu problema primeiramente.</li>
-            <li><b>Em caso de ao trocar dispositivo de tomada ou filtro de linha o problema foi resolvido, contate a manutenção e explique sobre a tomada ou filtro de linha com defeito. 
-              Caso somente o dispositivo não esteja funcionando na tomada ou filtro de Linha, contate o suporte Ti e explique a situação.</b></li>
-          </ul>
-          <h4>Caso seja identificado que o dispositivo continua sem funcionar em outro computador :</h4>
-          <ul>
-            <li>Contate o suporte Ti e explique todos os testes feitos.</li>
-          </ul>
-          <h4>Caso um novo dispositivo continue a não funcionar no primeiro computador há dar problema:</h4>
-          <ul>
-            <li>Novamente faça a troca do cabo de porta usb, Caso o problema persista contate o suporte Ti e explique a situação.</li>
-          </ul>
-        
+            <div class="sugestoes">
+                <h3>Dicas e Sugestões ao TI</h3>
+                <p><small>(Totalmente anônimo)</small></p>
+                
+                <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                    <textarea name="mensagem" placeholder="Escreva sua sugestão ou crítica aqui..." required></textarea>
+                    <button type="submit">Enviar Sugestão</button>
+                </form>
+            </div>
         </div>
-      </details>
-
-      <details>
-        <summary>FAQ</summary>
-        <div class="content">
-          <h4>Perguntas comuns</h4>
-          <ul>
-            <li>Posso ter vários tópicos? Sim.</li>
-            <li>Funciona no celular? Sim, é responsivo.</li>
-            <li>Precisa de JavaScript? Não, a interação é nativa.</li>
-          </ul>
+        <div class="copy">
+            <p>&copy; 2026 Setor de Tecnologia da Informação</p>
         </div>
-      </details>
+    </footer>
 
-    </section>
-  </div>
 </body>
 </html>
