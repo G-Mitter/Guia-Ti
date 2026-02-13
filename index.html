@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Suporte TI - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <div class="container">
             <h1>GUIA SUPORTE TI</h1>
             <p class="intro-text">
-                Site com o intuito de ajudar gerentes e encarregados a resolver problemas simples. 
+                Site com o intuito de ajudar gerentes e encarregados a resolver problemas simples.
                 <strong>O guia deve ser consultado antes de enviar mensagem no grupo pedindo ajuda.</strong>
             </p>
         </div>
     </header>
 
+
     <main class="container">
+        <section class="status-container">
+            <div class="status-box status-ok">
+                <span class="status-icon">●</span>
+                <span class="status-message">Operação 100% - Nenhum incidente relatado.</span>
+            </div>
+        </section>
         <h2>Selecione o problema:</h2>
-        
+
         <div class="grid-botoes">
             <a href="pdv-nao-puxa-venda.html" class="btn-topico">1. PDV não puxa venda DAV</a>
             <a href="erro-pin-pad.html" class="btn-topico">2. Erro de Pin Pad</a>
@@ -41,7 +50,7 @@
 
     <footer>
         <div class="container footer-content">
-            
+
             <div class="contato-ti">
                 <h3>Contato TI</h3>
                 <p>Celular/WhatsApp: (31) 97231-4001</p>
@@ -51,7 +60,7 @@
             <div class="sugestoes">
                 <h3>Dicas e Sugestões ao TI</h3>
                 <p><small>(Totalmente anônimo)</small></p>
-                
+
                 <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
                     <textarea name="mensagem" placeholder="Escreva sua sugestão ou crítica aqui..." required></textarea>
                     <button type="submit">Enviar Sugestão</button>
@@ -64,4 +73,5 @@
     </footer>
 
 </body>
+
 </html>
