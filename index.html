@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Suporte TI - Home</title>
-<link rel="icon" type="image/png" href="imagens/index/icon.png">
+    <link rel="icon" type="image/png" href="imagens/index/icon.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,16 +23,16 @@
     </header>
     <main class="container">
 
-    
-    <div class="status-container">
-        <div class="status-box status-ok">
-            <span class="status-icon">✔</span>
-            <span class="status-message">Sistemas operando normalmente.</span>
-        </div>
-    </div>
-    
 
-<!--
+        <div class="status-container">
+            <div class="status-box status-ok">
+                <span class="status-icon">✔</span>
+                <span class="status-message">Sistemas operando normalmente.</span>
+            </div>
+        </div>
+
+
+        <!--
         <div class="status-container">
             <div class="status-box status-alert">
                 <span class="status-icon">⚠️</span>
@@ -43,14 +43,18 @@
         </div>-->
 
         <h2>Selecione o problema:</h2>
+        <div class="pesquisa-container">
+            <input type="text" id="barra-pesquisa"
+                placeholder="Digite uma palavra-chave (ex: impressora, pdv, lentidão)...">
+        </div>
 
-        <div class="grid-botoes">
+        <div class="grid-botoes" id="lista-problemas">
             <a href="pdv-nao-puxa-venda.html" class="btn-topico">1. PDV não puxa venda DAV</a>
             <a href="erro-pin-pad.html" class="btn-topico">2. Erro de Pin Pad</a>
             <a href="linear-travado.html" class="btn-topico">3. Linear Travado</a>
             <a href="entrar-bi.html" class="btn-topico">4. Como entrar no BI</a>
             <a href="lentidao-cupom.html" class="btn-topico">5. Caixa com lentidão ao imprimir cupom</a>
-            <a href="exemplo-solucao.html" class="btn-topico">6. Subir vendas</a>  
+            <a href="exemplo-solucao.html" class="btn-topico">6. Subir vendas</a>
             <a href="exemplo-solucao.html" class="btn-topico">7. Fechamento de caixa</a>
             <a href="exemplo-solucao.html" class="btn-topico">8. Problemas com Impressora</a>
             <a href="exemplo-solucao.html" class="btn-topico">9. Como dar Carga</a>
@@ -84,7 +88,7 @@
             <p>&copy; 2026 Setor de Tecnologia da Informação</p>
         </div>
     </footer>
-
+    <script src="JS/pesquisa.js"></script>
 </body>
 
 </html>
