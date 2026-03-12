@@ -191,7 +191,8 @@ button[type="submit"]:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #004080; /* Ajustado para combinar com a cor do cabeçalho */
+    background-color: #004080;
+    /* Ajustado para combinar com a cor do cabeçalho */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -202,7 +203,8 @@ button[type="submit"]:hover {
 }
 
 .btn-pdf:hover {
-    background-color: #002b5e; /* Tom mais escuro do azul corporativo */
+    background-color: #002b5e;
+    /* Tom mais escuro do azul corporativo */
 }
 
 /* =========================================
@@ -279,4 +281,67 @@ button[type="submit"]:hover {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* =========================================
+   EFEITO LIGHTBOX (CLIQUE PARA AMPLIAR)
+   ========================================= */
+
+/* O fundo escuro (invisível por padrão) */
+.lightbox-modal {
+    display: none;
+    /* Escondido até clicar */
+    position: fixed;
+    z-index: 9999;
+    /* Fica por cima de absolutamente tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Preto com 85% de opacidade */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+/* A imagem ampliada no centro */
+.lightbox-conteudo {
+    max-width: 95%;
+    max-height: 90vh;
+    /* Não deixa a imagem passar da altura da tela */
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    /* Garante que a imagem não distorça */
+}
+
+/* O botão de fechar (X) */
+.lightbox-fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-fechar:hover {
+    color: #bbb;
+}
+
+/* Efeito visual nas imagens normais do site indicando que são clicáveis */
+.img-clicavel {
+    cursor: zoom-in;
+    /* Muda o mouse para uma lupa */
+    transition: transform 0.2s ease;
+}
+
+.img-clicavel:hover {
+    transform: scale(1.02);
+    /* Dá um zoom bem de leve ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
