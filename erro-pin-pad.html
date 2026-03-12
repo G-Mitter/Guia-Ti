@@ -26,7 +26,8 @@
 
             <h3>Passo a Passo para resolver:</h3>
             <ul>
-                <li><strong>Passo 1:</strong> Retire o pin pad da porta usb do computador e coloque em outra entrada usb.</li>
+                <li><strong>Passo 1:</strong> Retire o pin pad da porta usb do computador e coloque em outra entrada
+                    usb.</li>
                 <video autoplay muted loop playsinline
                     style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
                     <source src="imagens/erroPinPad/tira_usb.mp4" type="video/mp4">
@@ -35,16 +36,17 @@
                 <li><strong>Passo 2:</strong> Feche o APP do PDV dessa forma.</li>
                 <br> <img src="imagens/pdvNaoPuxa/imagem1.png" alt="Fechar Janela"
                     style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
-                    <br> <li>Ou feche pelo Gerenciador de tarefas.</li>
-                    <br> <img src="imagens/pdvNaoPuxa/gifPdvGerenciador.gif" alt="Fechar Janela"
+                <br>
+                <li>Ou feche pelo Gerenciador de tarefas.</li>
+                <br> <img src="imagens/pdvNaoPuxa/gifPdvGerenciador.gif" alt="Fechar Janela"
                     style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
                 <li><strong>Passo 3:</strong>Abra novamente o pdv e tente executar uma venda.
                 </li>
                 <li><strong>Caso isso não resolva, antes de entrar em contato com o TI reinicie a maquina</strong></li>
-               
+
             </ul>
             <br>
-            
+
 
             <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
                 <strong>Nota:</strong> Se após esses testes não Resolver, abra um chamado técnico informando o que já
@@ -52,6 +54,7 @@
             </div>
 
         </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
     </main>
 
     <footer>
@@ -59,7 +62,9 @@
             <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
+    <script src="exportar-pdf.js"></script>
 </body>
 
 </html>
