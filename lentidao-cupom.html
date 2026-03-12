@@ -21,7 +21,7 @@
 
         <div class="solucao-content" id="conteudo-pdf">
 
-            <h2>PDV não imprime cupom ou está com Lendidão</h2>
+            <h2>PDV não imprime cupom ou está com Lentidão</h2>
             <hr><br>
 
             <h3>Passo a Passo para resolver:</h3>
@@ -72,30 +72,10 @@
             <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('btn-gerar-pdf').addEventListener('click', function () {
-            // Seleciona apenas a área do conteúdo da solução
-            const elemento = document.getElementById('conteudo-pdf');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-            // Configurações aprimoradas do PDF
-            const opcoes = {
-                margin: 10, // Margem em milímetros
-                filename: 'solucao-pdv-guia-ti.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
+    <script src="exportar-pdf.js"></script>
 
-                // scrollY: 0 resolve o problema das páginas em branco
-                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-
-                // Evita que imagens e textos sejam cortados na quebra de página
-                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-            };
-
-            // Gera e faz o download do PDF
-            html2pdf().set(opcoes).from(elemento).save();
-        });
-    </script>
 </body>
 
 </html>
