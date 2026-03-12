@@ -186,6 +186,25 @@ button[type="submit"]:hover {
     color: #000;
 }
 
+/* Estilo para o botão de exportar PDF */
+.btn-pdf {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #004080; /* Ajustado para combinar com a cor do cabeçalho */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: #002b5e; /* Tom mais escuro do azul corporativo */
+}
+
 /* =========================================
    QUADRO DE STATUS DINÂMICO
    ========================================= */
