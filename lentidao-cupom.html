@@ -19,7 +19,7 @@
     <main class="container">
         <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
 
-        <div class="solucao-content"id="conteudo-pdf">
+        <div class="solucao-content" id="conteudo-pdf">
 
             <h2>PDV não imprime cupom ou está com Lendidão</h2>
             <hr><br>
@@ -41,9 +41,9 @@
             </ul>
             <br>
             <h3>Você pode também reiniciar sua conexão com o servidor:</h3>
-              <ul>
+            <ul>
                 <li><strong>Passo 1:</strong> Clique com o Botão direito encima do icone do windows.</li>
-                 <br> <img src="imagens/linearTravado/imagem3.jpeg" alt="Fechar Janela"
+                <br> <img src="imagens/linearTravado/imagem3.jpeg" alt="Fechar Janela"
                     style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
                 <li><strong>Passo 2:</strong> Selecione Encerrar ou Terminar Sessão.</li>
                 <li><strong>Passo 3:</strong> Clique em terminar sessão.
@@ -59,7 +59,8 @@
             </ul>
 
             <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
-                <strong>Nota:</strong> Se após esses testes não Resolver, abra um chamado técnico informando o que já foi feito no Grupo do TI.
+                <strong>Nota:</strong> Se após esses testes não Resolver, abra um chamado técnico informando o que já
+                foi feito no Grupo do TI.
             </div>
 
         </div>
@@ -71,20 +72,24 @@
             <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
         </div>
     </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    
     <script>
         document.getElementById('btn-gerar-pdf').addEventListener('click', function () {
-            // Seleciona apenas a área do conteúdo da solução (evita exportar o botão junto)
+            // Seleciona apenas a área do conteúdo da solução
             const elemento = document.getElementById('conteudo-pdf');
 
-            // Configurações do PDF
+            // Configurações aprimoradas do PDF
             const opcoes = {
-                margin:       10, // Margem em milímetros
-                filename:     'solucao-pdv-guia-ti.pdf', // Nome do arquivo gerado
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true }, // scale:2 melhora a resolução, useCORS permite carregar as imagens
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                margin: 10, // Margem em milímetros
+                filename: 'solucao-pdv-guia-ti.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+
+                // scrollY: 0 resolve o problema das páginas em branco
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+
+                // Evita que imagens e textos sejam cortados na quebra de página
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
             };
 
             // Gera e faz o download do PDF
