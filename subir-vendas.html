@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Quando as vendas parecem não ter Subido ao linear</h2>
+            <hr><br>
+
+            <h3>Passo a Passo para resolver:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> No PDV em que as vendas não subiram, clique no menu Utilitários.</li>
+                <br> <img src="imagens/subirVendas/TelaInicial.jpeg" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 2:</strong> Procure e abra a opção Recriar RV.</li>
+                <br> <img src="imagens/subirVendas/RecriarRVXMLTF.jpeg" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+                <li><strong>Passo 3:</strong>Na tela que abrir, preencha as informações conforme a imagem: no primeiro
+                    campo digite 1 e, no campo de data, insira o dia em que as vendas foram realizadas. Após preencher,
+                    aperte Enter.</li>
+                <br> <img src="imagens/subirVendas/Preecher.jpeg" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 4:</strong> Aperte Enter para confirmar a serie.</li>
+                <br> <img src="imagens/subirVendas/serie.png" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 5:</strong> Aguarde o processamento até que a tela de confirmação apareça.</li>
+                <br><img src="imagens/subirVendas/aguardar.png" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <br>
+                <li><strong>Passo 6:</strong> Repita o mesmo processo agora utilizando a opção Recriar TF.</li>
+
+                <br> <img src="imagens/subirVendas/1imagem.png" alt="Fechar Janela"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Caso isso não resolva, antes de entrar em contato com o TI reinicie a maquina</strong></li>
+            </ul>
+            <br>
+            <li><strong>Aguarde alguns Minutos, Pois os arquivos estão sendo processados, Caso após alguns minutos a
+                    venda não subir, entre em contato com o TI. </strong></li>
+            <li><strong>Para Agilizar envie uma foto do Relatorio de Fechamento de caixa</strong></li>
+
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> Se após esses testes não Resolver, abra um chamado técnico informando o que já
+                foi feito no Grupo do TI.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+
+
+
+</body>
+
+</html>
