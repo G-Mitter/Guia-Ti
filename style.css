@@ -371,3 +371,16 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2);
     border-color: #002b5e;
 }
+/* =========================================
+   ESTILOS DE LISTAS DENTRO DO CONTEÚDO
+   ========================================= */
+.solucao-content ul, 
+.solucao-content ol {
+    margin-left: 25px; /* Empurra a lista para a direita, dando espaço para os bullets */
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.solucao-content li {
+    margin-bottom: 5px; /* Dá um respiro entre um item e outro da lista */
+}
