@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; video-src 'self';">
     <title>Solução - Guia TI</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -68,10 +70,10 @@
     <script src="JS/exportar-pdf.js"></script>
     <script src="JS/lightbox.js"></script>
 
-<div id="lightbox-modal" class="lightbox-modal">
-    <span class="lightbox-fechar">&times;</span>
-    <img class="lightbox-conteudo" id="img-ampliada">
-</div>
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
 </body>
 
 </html>
