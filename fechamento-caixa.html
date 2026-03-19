@@ -23,39 +23,130 @@
 
         <div class="solucao-content" id="conteudo-pdf">
 
-            <h2>Fechamento de Caixa e Tesouraria</h2>
+            <h2>Fechamento Tesouraria/Caixa</h2>
             <hr><br>
 
-            <h3>Procedimento:</h3>
-            <p>O fechamento de caixa consiste na conferência dos valores entregues pelo Operador de Caixa ao final do dia de trabalho. Esses valores devem ser registrados separadamente nas carteiras de tesouraria, como dinheiro, cheques e cartões.</p>
+            <p>O fechamento de caixa consiste na conferência dos valores entregues pelo Operador de Caixa ao final do
+                dia de trabalho.</p>
+            <p>Esses valores devem ser registrados separadamente nas carteiras de tesouraria, como dinheiro, cheques e
+                cartões.</p>
+            <p>A diferença entre o total de vendas do caixa (conforme indicado no Relatório de Saída do Operador) pode
+                resultar em uma quebra de caixa, que será cobrada do operador caso exceda os limites estabelecidos.</p>
+            <p>Esse procedimento deve ser realizado no mesmo dia do evento e registrado até o final do expediente ou, no
+                máximo, no dia seguinte.</p>
+            <br>
+            <p>Para realizar esse processo deverá seguir os seguintes passos:</p>
             <br>
 
-            <h3>Passo a Passo:</h3>
+            <h3>Passo 1: Menu: Financeiro > Movimentações Tesouraria > Digitação cartão TEF/POS.</h3>
+            <br> <img src="imagens/fechamento/1.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <p>Nesta tela você digitará os lançamentos referentes as vendas realizadas no cartão POS.</p>
+            <p>Para realizar os lançamentos das vendas em POS, será necessário clicar no botão novo e preencher os
+                campos solicitados.</p>
             <ul>
-                <li><strong>Passo 1 (Digitação cartão TEF/POS):</strong> Acesse o Menu: <em>Financeiro > Movimentações Tesouraria > Digitação cartão TEF/POS</em>. Clique no botão "Novo" e preencha os campos solicitados (Filial, Caixa, Data da transação, Parcela, NSU, Carteira, Operador, etc).</li>
-                
-                <li><strong>Passo 2 (Fechamento Tesouraria/Caixa):</strong> Acesse o Menu: <em>Financeiro > Movimentações Tesouraria > Fechamento Tesouraria/Caixa</em>. 
-                    <br>Clique em "NOVO" e preencha os dados: Data Fec., Filial, Operador, Turno, Caixa e Valor total.
-                    <br>Utilize o botão "Impor. Cartão" para que todos os cartões passados no TEF referentes a esse operador sejam importados.
-                </li>
-                
-                <li><strong>Passo 3 (Fechamento Diário):</strong> Dentro do menu do fechamento Tesouraria ir em "Fechamento diário". 
-                    <br>Clique em "Novo", insira a data do fechamento, clique em "Carregar" e, em seguida, grave os dados. Nesse momento, os lançamentos dos caixas gerarão seus financeiros correspondentes.
-                </li>
+                <li><strong>Filial:</strong> Número da loja</li>
+                <li><strong>Caixa:</strong> Número da ECF ou NFCE.</li>
+                <li><strong>Data de emissão:</strong> Data da venda.</li>
+                <li><strong>Hora:</strong> Hora da venda.</li>
+                <li><strong>Data da transação:</strong> Efetivação da venda.</li>
+                <li><strong>Parcela:</strong> Quantidade de parcelas da venda.</li>
+                <li><strong>NSU:</strong> Número sequencial único.</li>
+                <li><strong>Carteira:</strong> Carteira tesouraria referente ao cartão.</li>
+                <li><strong>Operador:</strong> Operador que atuou no caixa.</li>
+                <li><strong>Observação:</strong> Todas as informações estarão contidas no comprovante de venda emitido
+                    na maquininha POS</li>
             </ul>
+            <br> <img src="imagens/fechamento/2.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <br>
+
+            <h3>Passo 2: Menu: Financeiro > Movimentações Tesouraria > Fechamento Tesouraria/Caixa</h3>
+            <br> <img src="imagens/fechamento/3.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <p>Para iniciar a digitação de um fechamento de caixa de operador, clicar no botão NOVO e preencher os
+                campos</p>
+            <ul>
+                <li><strong>Data Fec.:</strong> Data do fechamento de caixa a ser digitado (venda)</li>
+                <li><strong>Filial:</strong> número da loja</li>
+                <li><strong>Operador:</strong> Operador do caixa que trabalhou naquele dia</li>
+                <li><strong>Turno:</strong> Turno trabalhado (Dia/tarde / Noite)</li>
+                <li><strong>Caixa:</strong> O pdv (Encontra-se no final do relatório de saída de operador com o Nome
+                    ECF). EX.: ECF001</li>
+                <li><strong>Impor. Cartão:</strong> Todos os cartões passados no TEF referente a esse operador será
+                    importado.</li>
+                <li><strong>Valor total:</strong> valor Vendido referente ao operador no caixa (informação cedida na
+                    saída de operador)</li>
+            </ul>
+
+            <ul>
+                <li><strong>Carteira e Descrição:</strong> carteira de lançamento dos valores do caixa (Dinheiro,
+                    Cheque, Cartão Visa e Etc)</li>
+                <li><strong>Quebra:</strong> valor de quebra de caixa de operadores. Os valores continuaram a ser
+                    cobrados conforme instruções anteriores (Valor faltando acima de R$1,30 será cobrado de acordo
+                    analise do gerente)</li>
+            </ul>
+
+            <br> <img src="imagens/fechamento/4.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <br> <img src="imagens/fechamento/5.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <br>
+
+            <h3>Passo 3: Dentro do menu do fechamento Tesouraria ir em Fechamento diário.</h3>
+
+            <p>Após realizar o fechamento de todos os caixas operados no dia, será necessário realizar o fechamento
+                diário.</p>
+            <p>Nesse momento, os lançamentos dos caixas gerarão seus financeiros (Contas a Receber) correspondentes a
+                cada carteira de tesouraria registrada.</p>
 
             <br>
-            <h3>Relatórios de Conferência:</h3>
-            <ul>
-                <li><strong>Conferência da Tesouraria:</strong> Menu: <em>Relatórios > Financeiro > Tesouraria fechamento Tesouraria/ Caixa > Tipo de relatório: Fechamento Tesouraria/Caixa</em>.</li>
-                <li><strong>Conferência de Vendas:</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 130</em>. Verifique a coluna "diferença"; todos os três valores devem estar zerados para garantir que todos os cupons foram exportados.</li>
-                <li><strong>Verificar Operadores (Valor total de vendas por operador):</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 060</em>.</li>
-                <li><strong>Verificar Sangrias (Valores sangrados no PDV):</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 190</em>.</li>
-            </ul>
+            <br> <img src="imagens/fechamento/6.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
 
-            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
-                <strong>Nota:</strong> Esse procedimento deve ser realizado no mesmo dia do evento e registrado até o final do expediente ou, no máximo, no dia seguinte. A diferença entre o total de vendas do caixa pode resultar em quebra de caixa, que será cobrada do operador caso exceda os limites estabelecidos.
-            </div>
+            <p>Para realizar o processo, basta clicar em "Novo", inserir a data do fechamento, clicar em "Carregar" e,
+                em seguida, gravar os dados.</p>
+
+            <br> <img src="imagens/fechamento/7.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <br> <img src="imagens/fechamento/8.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <h3>Conferência da Tesouraria</h3>
+            <p>Menu: Relatórios > Financeiro > Tesouraria fechamento Tesouraria/ Caixa > Tipo de relatório: Fechamento
+                Tesouraria/Caixa.</p>
+
+            <br> <img src="imagens/fechamento/9.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <br> <img src="imagens/fechamento/10.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <br> <img src="imagens/fechamento/11.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <br>
+            <h3>Transações por carteiras TEF / POS </h3>
+            <p>Menu : Relatórios > Financeiro > Tesouraria transações TEF/ POS</p>
+            <br> <img src="imagens/fechamento/12.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <h3>Conferência de Vendas</h3>
+            <p>Para garantir que todos os cupons foram exportados para o servidor, verifique a coluna "diferença"; todos
+                os três valores devem estar zerados.</p>
+            <p>Menu: Relatórios > Vendas > Vendas ECF > Tipo do relatório = 130</p>
+            <br> <img src="imagens/fechamento/13.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <p>Para identificar quais operadores precisam realizar o fechamento e o valor total de vendas por operador,
+                é necessário fazer a verificação.</p>
+            <p>Menu: relatórios > vendas > vendas ECF > Tipo do relatório = 060</p>
+            <br> <img src="imagens/fechamento/14.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+            <p>Para verificar valores sangrados no pdv</p>
+            <p>Menu: relatórios > vendas > vendas ECF > Tipo do relatório = 190</p>
+            <br> <img src="imagens/fechamento/15.png" alt="Fechar Janela"
+                style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
 
         </div>
         <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
@@ -72,9 +163,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="JS/exportar-pdf.js"></script>
-    <script src="JS/lightbox.js"></script> <div id="lightbox-modal" class="lightbox-modal">
+    <script src="JS/lightbox.js"></script>
+
+    <div id="lightbox-modal" class="lightbox-modal">
         <span class="lightbox-fechar">&times;</span>
         <img class="lightbox-conteudo" id="img-ampliada">
     </div>
 </body>
+
 </html>
