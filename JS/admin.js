@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const SENHA_CORRETA = "ti123";
 
-    // COLOQUE AS MESMAS CHAVES AQUI
+    // Suas chaves
     const BIN_ID = '69bc5cc4c3097a1dd53ea62c'; 
     const API_KEY = '$2a$10$rUq7CDtC9n0BAD1QiZonbe81hzcDQASDdlwWRtYJTv7CTjYzAYm0i';
 
@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Busca o status atual da nuvem para preencher os campos
+    // Busca o status atual da nuvem
     function carregarDadosAtuais() {
-        fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+        const urlBusca = 'https://api.jsonbin.io/v3/b/' + BIN_ID + '/latest';
+        
+        fetch(urlBusca, {
             method: 'GET',
             headers: { 'X-Access-Key': API_KEY }
         })
@@ -58,11 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
             mensagem: mensagemEscolhida.replace(/\n/g, '<br>')
         };
 
-        // Muda o texto do botão para mostrar que está carregando
         btnSalvar.textContent = "Salvando...";
 
+        const urlSalvar = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+
         // Envia para o JSONBin
-        fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+        fetch(urlSalvar, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -79,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(erro => {
             alert("Erro ao salvar no servidor. Tente novamente.");
             btnSalvar.textContent = "Salvar Alterações";
+            console.error(erro);
         });
     });
 });

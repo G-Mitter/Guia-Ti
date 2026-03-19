@@ -2,12 +2,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     const areaStatus = document.getElementById('area-de-status');
     
-    // COLOQUE SUAS CHAVES AQUI
+    // Suas Chaves
     const BIN_ID = '69bc5cc4c3097a1dd53ea62c'; 
     const API_KEY = '$2a$10$rUq7CDtC9n0BAD1QiZonbe81hzcDQASDdlwWRtYJTv7CTjYzAYm0i';
 
+    // Montando a URL de forma segura (sem usar crases)
+    const urlBusca = 'https://api.jsonbin.io/v3/b/' + BIN_ID + '/latest';
+
     // Busca o status na nuvem
-    fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+    fetch(urlBusca, {
         method: 'GET',
         headers: {
             'X-Access-Key': API_KEY
@@ -15,12 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(resposta => resposta.json())
     .then(dados => {
-        const statusSalvo = dados.record; // O JSONBin guarda nossos dados dentro de "record"
+        const statusSalvo = dados.record; 
         renderizarStatus(statusSalvo);
     })
     .catch(erro => {
         console.error("Erro ao buscar status:", erro);
-        // Se a internet falhar, assume que está tudo OK para não assustar os usuários
         renderizarStatus({ estado: 'ok', mensagem: 'Sistemas operando normalmente.' });
     });
 
