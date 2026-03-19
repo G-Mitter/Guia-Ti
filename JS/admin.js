@@ -11,55 +11,74 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSalvar = document.getElementById('btn-salvar');
     const msgSucesso = document.getElementById('msg-sucesso');
 
-    // SENHA DO PAINEL (Lembre-se: em frontend isso não é 100% seguro contra hackers, mas serve para usuários comuns)
-    const SENHA_CORRETA = "1234";
+    const SENHA_CORRETA = "ti123";
 
-    // Lógica de Login
+    // COLOQUE AS MESMAS CHAVES AQUI
+    const BIN_ID = '69bc5cc4c3097a1dd53ea62c'; 
+    const API_KEY = '$2a$10$rUq7CDtC9n0BAD1QiZonbe81hzcDQASDdlwWRtYJTv7CTjYzAYm0i';
+
+    // Login
     btnEntrar.addEventListener('click', function () {
         if (inputSenha.value === SENHA_CORRETA) {
             telaLogin.style.display = 'none';
             painelControle.style.display = 'block';
-            carregarDadosAtuais(); // Carrega o que já está salvo
+            carregarDadosAtuais();
         } else {
             msgErro.style.display = 'block';
         }
     });
 
-    // Função para preencher o painel com o status atual
+    // Busca o status atual da nuvem para preencher os campos
     function carregarDadosAtuais() {
-        const statusSalvo = JSON.parse(localStorage.getItem('guiaTiStatus'));
-        if (statusSalvo) {
+        fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+            method: 'GET',
+            headers: { 'X-Access-Key': API_KEY }
+        })
+        .then(resposta => resposta.json())
+        .then(dados => {
+            const statusSalvo = dados.record;
             seletorStatus.value = statusSalvo.estado;
-            textoMensagem.value = statusSalvo.mensagem !== 'Sistemas operando normalmente.' ? statusSalvo.mensagem : '';
-        }
+            textoMensagem.value = statusSalvo.mensagem !== 'Sistemas operando normalmente.' ? statusSalvo.mensagem.replace(/<br>/g, '\n') : '';
+        });
     }
 
-    // Lógica de Salvar
+    // Lógica de Salvar na Nuvem (PUT)
     btnSalvar.addEventListener('click', function () {
         const estadoEscolhido = seletorStatus.value;
         let mensagemEscolhida = textoMensagem.value.trim();
 
-        // Se o cara escolheu OK e deixou o texto em branco, coloca a mensagem padrão
         if (estadoEscolhido === 'ok' && mensagemEscolhida === '') {
             mensagemEscolhida = 'Sistemas operando normalmente.';
-        } 
-        // Se escolheu Erro e deixou em branco
-        else if (estadoEscolhido === 'erro' && mensagemEscolhida === '') {
+        } else if (estadoEscolhido === 'erro' && mensagemEscolhida === '') {
             mensagemEscolhida = 'Sistema com instabilidade. A equipe de TI já está atuando.';
         }
 
         const novoStatus = {
             estado: estadoEscolhido,
-            mensagem: mensagemEscolhida.replace(/\n/g, '<br>') // Troca quebras de linha por <br> do HTML
+            mensagem: mensagemEscolhida.replace(/\n/g, '<br>')
         };
 
-        // Salva na memória
-        localStorage.setItem('guiaTiStatus', JSON.stringify(novoStatus));
+        // Muda o texto do botão para mostrar que está carregando
+        btnSalvar.textContent = "Salvando...";
 
-        // Mostra mensagem de sucesso
-        msgSucesso.style.display = 'block';
-        setTimeout(() => {
-            msgSucesso.style.display = 'none';
-        }, 3000);
+        // Envia para o JSONBin
+        fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Master-Key': API_KEY
+            },
+            body: JSON.stringify(novoStatus)
+        })
+        .then(resposta => resposta.json())
+        .then(dados => {
+            btnSalvar.textContent = "Salvar Alterações";
+            msgSucesso.style.display = 'block';
+            setTimeout(() => { msgSucesso.style.display = 'none'; }, 3000);
+        })
+        .catch(erro => {
+            alert("Erro ao salvar no servidor. Tente novamente.");
+            btnSalvar.textContent = "Salvar Alterações";
+        });
     });
 });
