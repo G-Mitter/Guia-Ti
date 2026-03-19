@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Painel de Controle TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="tela-login" class="solucao-content" style="max-width: 400px; margin: 0 auto;">
+            <h2>Acesso Restrito</h2>
+            <input type="password" id="senha-admin" placeholder="Digite a senha" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <button id="btn-entrar" class="btn-pdf" style="width: 100%;">Entrar</button>
+            <p id="msg-erro" style="color: red; display: none; margin-top: 10px;">Senha incorreta!</p>
+        </div>
+
+        <div id="painel-controle" class="solucao-content" style="display: none;">
+            <h2>Gerenciar Status do Sistema</h2>
+            <hr><br>
+            
+            <label style="font-weight: bold;">Selecione o Estado Geral:</label>
+            <select id="seletor-status" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;">
+                <option value="ok">✔ Tudo Certo (Sistemas operando normalmente)</option>
+                <option value="erro">⚠️ Erro Geral (Problema no sistema)</option>
+            </select>
+
+            <label style="font-weight: bold;">Mensagem Personalizada (Opcional):</label>
+            <textarea id="texto-mensagem" placeholder="Ex: Linear indisponível para manutenção até as 14h..." style="width: 100%; padding: 10px; margin-top: 5px; height: 100px;"></textarea>
+
+            <button id="btn-salvar" class="btn-pdf" style="background-color: #28a745; margin-top: 20px;">Salvar Alterações</button>
+            <p id="msg-sucesso" style="color: green; display: none; margin-top: 10px; font-weight: bold;">Status atualizado com sucesso!</p>
+            
+            <br><br>
+            <a href="index.html" class="btn-voltar">← Voltar para a página inicial</a>
+        </div>
+    </main>
+    <script src="JS/admin.js"></script>
+</body>
+</html>
