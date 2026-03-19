@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://cdnjs.cloudflare.com;">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Fechamento de Caixa e Tesouraria</h2>
+            <hr><br>
+
+            <h3>Procedimento:</h3>
+            <p>O fechamento de caixa consiste na conferência dos valores entregues pelo Operador de Caixa ao final do dia de trabalho. Esses valores devem ser registrados separadamente nas carteiras de tesouraria, como dinheiro, cheques e cartões.</p>
+            <br>
+
+            <h3>Passo a Passo:</h3>
+            <ul>
+                <li><strong>Passo 1 (Digitação cartão TEF/POS):</strong> Acesse o Menu: <em>Financeiro > Movimentações Tesouraria > Digitação cartão TEF/POS</em>. Clique no botão "Novo" e preencha os campos solicitados (Filial, Caixa, Data da transação, Parcela, NSU, Carteira, Operador, etc).</li>
+                
+                <li><strong>Passo 2 (Fechamento Tesouraria/Caixa):</strong> Acesse o Menu: <em>Financeiro > Movimentações Tesouraria > Fechamento Tesouraria/Caixa</em>. 
+                    <br>Clique em "NOVO" e preencha os dados: Data Fec., Filial, Operador, Turno, Caixa e Valor total.
+                    <br>Utilize o botão "Impor. Cartão" para que todos os cartões passados no TEF referentes a esse operador sejam importados.
+                </li>
+                
+                <li><strong>Passo 3 (Fechamento Diário):</strong> Dentro do menu do fechamento Tesouraria ir em "Fechamento diário". 
+                    <br>Clique em "Novo", insira a data do fechamento, clique em "Carregar" e, em seguida, grave os dados. Nesse momento, os lançamentos dos caixas gerarão seus financeiros correspondentes.
+                </li>
+            </ul>
+
+            <br>
+            <h3>Relatórios de Conferência:</h3>
+            <ul>
+                <li><strong>Conferência da Tesouraria:</strong> Menu: <em>Relatórios > Financeiro > Tesouraria fechamento Tesouraria/ Caixa > Tipo de relatório: Fechamento Tesouraria/Caixa</em>.</li>
+                <li><strong>Conferência de Vendas:</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 130</em>. Verifique a coluna "diferença"; todos os três valores devem estar zerados para garantir que todos os cupons foram exportados.</li>
+                <li><strong>Verificar Operadores (Valor total de vendas por operador):</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 060</em>.</li>
+                <li><strong>Verificar Sangrias (Valores sangrados no PDV):</strong> Menu: <em>Relatórios > Vendas > Vendas ECF > Tipo do relatório = 190</em>.</li>
+            </ul>
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> Esse procedimento deve ser realizado no mesmo dia do evento e registrado até o final do expediente ou, no máximo, no dia seguinte. A diferença entre o total de vendas do caixa pode resultar em quebra de caixa, que será cobrada do operador caso exceda os limites estabelecidos.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script> <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+</body>
+</html>
