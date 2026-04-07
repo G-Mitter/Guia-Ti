@@ -43,3 +43,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     atualizarStatusNoSite();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const areaStatus = document.getElementById('area-de-status');
+    
+    // Altere para false para simular um aviso de erro
+    const sistemasOk = true; 
+
+    if (sistemasOk) {
+        areaStatus.innerHTML = `
+            <div class="status-container">
+                <div class="status-box status-ok">
+                    <span class="status-icon">✔</span>
+                    <span class="status-message">Sistemas operando normalmente.</span>
+                </div>
+            </div>`;
+    } else {
+        areaStatus.innerHTML = `
+            <div class="status-container">
+                <div class="status-box status-alert">
+                    <span class="status-icon">⚠️</span>
+                    <span class="status-message">Aviso: Instabilidade no sistema Linear.</span>
+                </div>
+            </div>`;
+    }
+});
