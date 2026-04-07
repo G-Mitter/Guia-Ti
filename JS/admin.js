@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSalvar = document.getElementById('btn-salvar');
     const msgSucesso = document.getElementById('msg-sucesso');
 
-    const SENHA_CORRETA = "ti123";
+    const SENHA_CORRETA = "1234";
 
     // Suas chaves
     const BIN_ID = '69bc5cc4c3097a1dd53ea62c'; 
