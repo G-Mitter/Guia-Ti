@@ -66,4 +66,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>`;
     }
+});// Aguarda o DOM estar pronto para evitar o erro de 'null'
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const areaStatus = document.getElementById('area-de-status');
+
+    // Verifica se o elemento realmente existe na página atual
+    if (!areaStatus) {
+        console.warn("Aviso: Elemento 'area-de-status' não encontrado nesta página.");
+        return; 
+    }
+
+    // Altere para false para testar o modo de alerta
+    const sistemasOk = true; 
+
+    try {
+        if (sistemasOk) {
+            areaStatus.innerHTML = `
+                <div class="status-container">
+                    <div class="status-box status-ok">
+                        <span class="status-icon">✔</span>
+                        <span class="status-message">Sistemas operando normalmente.</span>
+                    </div>
+                </div>`;
+        } else {
+            areaStatus.innerHTML = `
+                <div class="status-container">
+                    <div class="status-box status-alert">
+                        <span class="status-icon">⚠️</span>
+                        <span class="status-message">Aviso: Instabilidade no sistema Linear.</span>
+                    </div>
+                </div>`;
+        }
+    } catch (error) {
+        console.error("Erro ao injetar o HTML de status:", error);
+    }
 });
