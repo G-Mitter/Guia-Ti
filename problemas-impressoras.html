@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://cdnjs.cloudflare.com;">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Impressora não está imprimindo</h2>
+            <hr><br>
+
+            <h3>Causa Provável:</h3>
+            <p>Impressora Travou ou computador não está conseguindo se comunicar com a impressora.</p>
+
+            <br>
+
+            <h3>Passo a Passo para resolver:</h3>
+            <h2>Co:ferir conexão da impressora com o computador</h2>
+            <ul>
+                <li><strong>Passo 1:</strong>Desconecte o Cabo usb da impressora e conecte novamente, Faça o mesmo do
+                    Lado do cabo que conecta no computador.</li>
+                <br> <video autoplay muted loop playsinline
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                    <source src="imagens/erroPinPad/tira_usb.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <br>
+                <li><strong>Passo 2:</strong>Verifique se agora a impressora está funcionando corretamente.</li>
+            </ul>
+
+            <h2>Caso não de certo faça o seguinte:</h2>
+            <ul>
+                <li><strong>Passo 1:</strong> Desligue a impressora e ligue novamente:</li>
+
+                <li><strong>Passo 2:</strong> Abra as tampas e verifique se há folhas amassadas presas no mecanismo
+                    (atolamento)
+                    e se os cartuchos ou tanques têm tinta suficiente.</li>
+
+                <li><strong>Passo 3:</strong> Reinicie o computador.</li>
+
+            </ul>
+
+
+
+            <br>
+
+            <h2>Agora envie um arquivo para impressão</h2>
+
+
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> Se após esses testes ainda assim não funcionar, Entre em contato conosco
+                informando que já fez o processo acima.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato conosco no seu Grupo!</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+</body>
+
+</html>
