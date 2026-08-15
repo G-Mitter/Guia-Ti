@@ -3,7 +3,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat&logo=github)](https://g-mitter.github.io/Guia-Ti/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
+https://g-mitter.github.io/Guia-Ti/
 O **Guia-TI** é um portal web desenvolvido para centralizar manuais, boas práticas e procedimentos operacionais de TI para equipes de loja e filiais. A aplicação inclui um sistema dinâmico de alertas de status que notifica usuários em tempo real sobre quedas ou manutenções de servidores, **reduzindo drasticamente a abertura de chamados duplicados no suporte de TI**.
 
 ---
