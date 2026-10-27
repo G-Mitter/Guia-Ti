@@ -1,4 +1,4 @@
 {
-    "estado": "ok",
-    "mensagem": "Sistemas operando normalmente."
+  "estado": "erro",
+  "mensagem": "sem pix"
 }
