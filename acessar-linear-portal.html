@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://cdnjs.cloudflare.com;">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Como acessar o Linear pelo Portal</h2>
+            <hr><br>
+            <p>O Linear agora funciona na nuvem. Para entrar, use o Portal LinearCloud. Recomendamos o Google Chrome.</p>
+            <br>
+            <h3>Passo a Passo:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Abra o Google Chrome e pesquise por <strong>"Portal Linear"</strong>. Clique no primeiro resultado, que leva a <strong>portal.linearcloud.com.br</strong>.</li>
+                <br> <img src="imagens/linearPortal/img-000.png" alt="Pesquisa Portal Linear"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <br> <img src="imagens/linearPortal/img-001.png" alt="Endereço do Portal"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 2:</strong> No quadro escuro, digite seu e-mail no campo <strong>Login</strong> e a senha no campo <strong>Senha</strong>. Depois clique no botão vermelho <strong>"Acessar Portal"</strong>.</li>
+                <br> <img src="imagens/linearPortal/img-002.png" alt="Tela de login do Portal"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 3:</strong> Quando o Chrome perguntar <strong>"Salvar senha?"</strong>, clique em <strong>"Salvar"</strong>. Assim, nas próximas vezes, login e senha já aparecem preenchidos.</li>
+                <br> <img src="imagens/linearPortal/img-003.png" alt="Salvar senha no Chrome"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 4:</strong> No menu escuro da esquerda, clique em <strong>"SGLinear - Sistema de gestão e ERP"</strong>. Aguarde a tela do Linear abrir e entre com o mesmo usuário e senha que você já usava no Linear.</li>
+                <br> <img src="imagens/linearPortal/img-004.png" alt="Menu SGLinear"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+            <br>
+            <h3>Dica - Salve nos favoritos:</h3>
+            <ul>
+                <li><strong>Dica:</strong> Com o portal aberto, clique na estrela, no canto da barra de endereço. Em <strong>Pasta</strong>, deixe <strong>Barra de favoritos</strong> e clique em <strong>Concluído</strong>. Depois, é só clicar em Portal Linear nos favoritos.</li>
+                <br> <img src="imagens/linearPortal/img-005.png" alt="Salvar nos favoritos"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> Se o login ou a senha não funcionarem, ou se o SGLinear não abrir, avise o suporte no Grupo do TI.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script>
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+</body>
+
+</html>

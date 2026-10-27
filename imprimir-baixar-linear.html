@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://cdnjs.cloudflare.com;">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Como baixar ou imprimir no Linear</h2>
+            <hr><br>
+            <p>Veja como salvar um documento (relatório) no computador ou imprimi-lo.</p>
+            <br>
+            <h3>Passo a Passo:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Clique no ícone da impressora do relatório.</li>
+                <br> <img src="imagens/imprimirLinear/img-000.png" alt="Ícone de impressora"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 2:</strong> Sempre escolha a <strong>Universal Printer</strong>. Depois clique em <strong>"Imprimir"</strong>.</li>
+                <br> <img src="imagens/imprimirLinear/img-001.png" alt="Escolher Universal Printer"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 3:</strong> O documento vai abrir. Olhe os dois ícones no canto direito: <strong>ícone de documento (direita)</strong> salva no computador; <strong>ícone de impressora (esquerda)</strong> imprime.</li>
+                <br> <img src="imagens/imprimirLinear/img-002.png" alt="Ícones de salvar e imprimir"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+            <br>
+            <h3>Opção A - Salvar no computador (PDF):</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Clique no ícone de documento, o da direita. O arquivo será baixado.</li>
+                <li><strong>Passo 2:</strong> Abra a pasta <strong>Downloads</strong> do computador para encontrá-lo.</li>
+                <br> <img src="imagens/imprimirLinear/img-003.png" alt="Salvar no computador"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+            <br>
+            <h3>Opção B - Imprimir:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Clique no ícone de impressora, o da esquerda.</li>
+                <li><strong>Passo 2:</strong> Confira se a impressora escolhida é a correta. Depois clique em <strong>"Imprimir"</strong>.</li>
+                <br> <img src="imagens/imprimirLinear/img-004.png" alt="Imprimir documento"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> Se a impressora estiver errada, clique em <strong>"Ver mais..."</strong> para achar a sua.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script>
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+</body>
+
+</html>
