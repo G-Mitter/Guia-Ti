@@ -1,0 +1,35 @@
+# Troca o aviso do site (status.json) pela aba Actions: "Trocar aviso" → Run workflow.
+name: Trocar aviso
+
+on:
+  workflow_dispatch:
+    inputs:
+      estado:
+        description: Estado do sistema
+        type: choice
+        options: [ok, erro]
+      mensagem:
+        description: Mensagem (deixe vazio para usar a padrão)
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  trocar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Atualizar status.json
+        env:
+          ESTADO: ${{ inputs.estado }}
+          MENSAGEM: ${{ inputs.mensagem }}
+        run: |
+          if [ -z "$MENSAGEM" ]; then
+            if [ "$ESTADO" = ok ]; then MENSAGEM="Sistemas operando normalmente."
+            else MENSAGEM="Sistema com instabilidade. A equipe de TI já está atuando."; fi
+          fi
+          jq -n --arg e "$ESTADO" --arg m "$MENSAGEM" '{estado: $e, mensagem: $m}' > status.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || { git commit -am "Aviso: $ESTADO"; git push; }
