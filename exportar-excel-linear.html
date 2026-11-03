@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://cdnjs.cloudflare.com;">
+    <title>Solução - Guia TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Base de Conhecimento TI</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Menu Principal</a>
+
+        <div class="solucao-content" id="conteudo-pdf">
+
+            <h2>Como exportar relatório para Excel no Linear</h2>
+            <hr><br>
+            <p>Veja como salvar um relatório do Linear em Excel e trazer o arquivo para o seu computador.</p>
+            <br>
+            <h3>Parte 1 - Exportar o relatório:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Com o relatório aberto na tela, clique no <strong>primeiro ícone</strong> da barra, no canto superior esquerdo (ícone de exportar).</li>
+                <br> <img src="imagens/exportarExcel/img-000.png" alt="Ícone de exportar"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 2:</strong> Vai abrir a janela <strong>"Exportar Relatório"</strong>. No lado esquerdo, clique em <strong>Desktop</strong>.</li>
+                <br> <img src="imagens/exportarExcel/img-001.png" alt="Escolher Desktop"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 3:</strong> Em <strong>Nome</strong>, digite o nome do arquivo. Em <strong>Tipo</strong>, abra a lista e escolha <strong>Microsoft Excel (*.xls)</strong> ou <strong>Microsoft Excel - Somente dados (*.xlsx)</strong>. Os dois abrem no Excel.</li>
+                <br> <img src="imagens/exportarExcel/img-002.png" alt="Escolher Microsoft Excel"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 4:</strong> Confira se o Tipo ficou como <strong>Microsoft Excel</strong> e clique em <strong>"Salvar"</strong>.</li>
+                <br> <img src="imagens/exportarExcel/img-003.png" alt="Clicar em Salvar"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 5:</strong> Aguarde o processamento. Quando aparecer <strong>"Exportação concluída"</strong>, clique em <strong>"OK"</strong>.</li>
+                <br> <img src="imagens/exportarExcel/img-004.png" alt="Exportação concluída"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+            <br>
+            <h3>Parte 2 - Baixar o arquivo para o computador:</h3>
+            <ul>
+                <li><strong>Passo 1:</strong> Passe o mouse no <strong>topo da tela do Linear</strong>, na setinha do meio, para abrir a barra de ícones. Clique na <strong>nuvem com a seta para baixo</strong> (<strong>"From Server to PC"</strong>).</li>
+                <br> <img src="imagens/exportarExcel/img-005.png" alt="Ícone From Server to PC"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 2:</strong> Na janela <strong>"Descarregar arquivo"</strong>, clique em <strong>Desktop</strong>, selecione o arquivo que você salvou e clique em <strong>"Abrir"</strong>.</li>
+                <br> <img src="imagens/exportarExcel/img-006.png" alt="Selecionar arquivo e Abrir"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 3:</strong> Aguarde o <strong>"Please wait"</strong>. O navegador vai mostrar o download concluído no canto superior direito.</li>
+                <br> <img src="imagens/exportarExcel/img-007.png" alt="Download concluído"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+                <li><strong>Passo 4:</strong> Abra a pasta <strong>Downloads</strong> do computador. O arquivo do Excel estará lá.</li>
+                <br> <img src="imagens/exportarExcel/img-008.png" alt="Arquivo na pasta Downloads"
+                    style="display: block; margin: 10px auto; max-width: 100%; height: auto; border: 1px solid #ccc;">
+            </ul>
+
+            <div style="background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px;">
+                <strong>Nota:</strong> O arquivo é salvo primeiro no Linear (no servidor). Por isso a Parte 2 é obrigatória: sem ela o arquivo não chega no seu computador.
+            </div>
+
+        </div>
+        <button id="btn-gerar-pdf" class="btn-pdf">Exportar para PDF</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: #ddd;">Dúvida persistiu? Entre em contato no Grupo do TI</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/exportar-pdf.js"></script>
+    <script src="JS/lightbox.js"></script>
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-fechar">&times;</span>
+        <img class="lightbox-conteudo" id="img-ampliada">
+    </div>
+</body>
+
+</html>
